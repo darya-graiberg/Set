@@ -1,0 +1,87 @@
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class Set<E> implements Iterable<E> {
+    private HashSet<E> set;
+
+    public Set() {
+        set = new HashSet<>();
+    }
+
+    public void add(E element) {
+        set.add(element);
+    }
+
+    public void remove(E element) {
+        set.remove(element);
+    }
+
+    public boolean contains(E element) {
+        return set.contains(element);
+    }
+
+    public int size() {
+        return set.size();
+    }
+
+    public boolean isEmpty() {
+        return set.isEmpty();
+    }
+
+    public void clear() {
+        set.clear();
+    }
+
+    public Iterator<E> iterator() {
+        return set.iterator();
+    }
+
+    public void print() {
+        for (E element : set) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Set<String> set = new Set<>();
+
+        // Добавляем элементы в множество
+        set.add("apple");
+        set.add("banana");
+        set.add("orange");
+
+        // Выводим содержимое множества
+        System.out.print("Содержимое множества: ");
+        set.print();
+
+        // Удаляем элемент из множества
+        set.remove("banana");
+
+        // Выводим содержимое множества после удаления элемента
+        System.out.print("Содержимое множества после удаления элемента: ");
+        set.print();
+
+        // Проверяем наличие элемента в множестве
+        System.out.println("Множество содержит 'apple'? " + set.contains("apple"));
+
+        // Выводим размер множества
+        System.out.println("Размер множества: " + set.size());
+
+        // Проверяем, пустое ли множество
+        System.out.println("Множество пустое? " + set.isEmpty());
+
+        // Очищаем множество
+        set.clear();
+
+        // Выводим содержимое множества после очистки
+        System.out.print("Содержимое множества после очистки: ");
+        set.print();
+
+        // Выводим размер множества после очистки
+        System.out.println("Размер множества после очистки: " + set.size());
+
+        // Проверяем, пустое ли множество после очистки
+        System.out.println("Множество пустое после очистки? " + set.isEmpty());
+    }
+}
