@@ -1,18 +1,18 @@
-import java.util.HashSet;
+import java.util.HashSet;    // стандартная библиотека Java
 import java.util.Iterator;
 
-public class Set<E> implements Iterable<E> {
+class Set<E> implements Iterable<E> {
     private HashSet<E> set;
 
     public Set() {
         set = new HashSet<>();
     }
 
-    public void add(E element) {
+    public void add(E element) {    // добавляет элемент в множество
         set.add(element);
     }
 
-    public void remove(E element) {
+    public void remove(E element) {    // удаляет элемент из множества
         set.remove(element);
     }
 
@@ -20,15 +20,15 @@ public class Set<E> implements Iterable<E> {
         return set.contains(element);
     }
 
-    public int size() {
+    public int size() {    // размер множества
         return set.size();
     }
 
-    public boolean isEmpty() {
+    public boolean isEmpty() {    // проверяет, пустое ли множество
         return set.isEmpty();
     }
 
-    public void clear() {
+    public void clear() {    // очищает множество
         set.clear();
     }
 
@@ -36,7 +36,7 @@ public class Set<E> implements Iterable<E> {
         return set.iterator();
     }
 
-    public void print() {
+    public void print() {    // выводит содержимое множества
         for (E element : set) {
             System.out.print(element + " ");
         }
