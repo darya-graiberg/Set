@@ -42,7 +42,8 @@ class Set<E> implements Iterable<E> {
         }
         System.out.println();
     }
-
+}
+public class Main {
     public static void main(String[] args) {
         Set<String> set = new Set<>();
 
@@ -53,35 +54,35 @@ class Set<E> implements Iterable<E> {
 
         // Выводим содержимое множества
         System.out.print("Содержимое множества: ");
-        set.print();
+        set.print();    // banana orange apple 
 
         // Удаляем элемент из множества
         set.remove("banana");
 
         // Выводим содержимое множества после удаления элемента
         System.out.print("Содержимое множества после удаления элемента: ");
-        set.print();
+        set.print();    // orange apple 
 
         // Проверяем наличие элемента в множестве
-        System.out.println("Множество содержит 'apple'? " + set.contains("apple"));
+        System.out.println("Множество содержит 'apple'? " + set.contains("apple")); // true
 
         // Выводим размер множества
-        System.out.println("Размер множества: " + set.size());
+        System.out.println("Размер множества: " + set.size());  // 2
 
         // Проверяем, пустое ли множество
-        System.out.println("Множество пустое? " + set.isEmpty());
+        System.out.println("Множество пустое? " + set.isEmpty()); // false
 
         // Очищаем множество
         set.clear();
 
         // Выводим содержимое множества после очистки
         System.out.print("Содержимое множества после очистки: ");
-        set.print();
+        set.print();    // пустое
 
         // Выводим размер множества после очистки
-        System.out.println("Размер множества после очистки: " + set.size());
+        System.out.println("Размер множества после очистки: " + set.size());    // 0
 
         // Проверяем, пустое ли множество после очистки
-        System.out.println("Множество пустое после очистки? " + set.isEmpty());
+        System.out.println("Множество пустое после очистки? " + set.isEmpty()); // true
     }
 }
